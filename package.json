@@ -1,0 +1,31 @@
+{
+  "name": "artour",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nries1/artour.git"
+  },
+  "author": "Nicolas Ries",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nries1/artour/issues"
+  },
+  "homepage": "https://github.com/nries1/artour#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-html": "^6.0.3",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}

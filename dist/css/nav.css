@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+    width: 100%;
+}
+.nav-item {
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+}
+.home {
+    background-image: url('../assets/home.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.camera {
+    background-image: url('../assets/camera.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.place {
+    background-image: url('../assets/place.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

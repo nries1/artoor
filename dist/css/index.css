@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.logo-container {
+  font-size: 24px;
+  display: flex;
+}
+.logo {
+  background-image: url('../assets/binoculars.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 24px;
+}
