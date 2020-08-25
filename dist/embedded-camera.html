@@ -19,12 +19,12 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
         <a-assets>
-            <a-entity gltf-model="./assets/models/dragonite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" id="magnemite"></a-entity>
+            <!-- <a-entity gltf-model="./assets/models/dragonite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" id="magnemite"></a-entity> -->
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
         </a-assets>
-        <a-entity gltf-model="./assets/models/dragonite/scene.gltf" rotation="0 180 0" position="0 0 3" scale="0.15 0.15 0.15" animation-mixer/>
-        <!-- <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
-            <a-gltf-model src="#magnemite"></a-gltf-model>
-        </a-marker> -->
+        <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
+            <a-box src="#boxTexture"></a-box>
+        </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
     </div>
