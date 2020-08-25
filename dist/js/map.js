@@ -4,7 +4,7 @@ var markers = [
     position: { lat: 40.716552, lng: -73.946714 },
     icon: './assets/record_voice_over.svg',
     info:
-      '<div stlye="font-size: 12px;"><div>Cozy outdoor patio with handmade craft cocktails</div><div style="display: flex;"><span style="margin-right: 10px;">Look for:</span><div style="background-image: url(./assets/watermellon.png); background-repeat: no-repeat; width: 15px; height: 15px; background-size: cover;"></div></div></div>',
+      '<h4>Zak\'s Patio</h4><div stlye="font-size: 12px;"><div>Cozy outdoor patio with handmade craft cocktails</div><div style="display: flex;"><span style="margin-right: 10px;">Look for:</span><div style="background-image: url(./assets/watermellon.png); background-repeat: no-repeat; width: 15px; height: 15px; background-size: cover;"></div></div></div>',
   },
 ];
 

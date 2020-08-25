@@ -4,7 +4,7 @@ body {
 }
 #myEmbeddedScene {
   width: 100vw;
-  height: 92vh;
+  height: 94vh;
   height: 200px;
 }
 a-scene {
@@ -15,5 +15,5 @@ a-scene {
 }
 iframe {
   width: 100%;
-  height: 100%;
+  height: 94vh;
 }
