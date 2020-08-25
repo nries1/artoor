@@ -7,11 +7,6 @@
     />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="css/camera.css" />
-    <script>
-        window.addEventListener('click', function() {
-          document.getElementById('vid2').play();
-        });
-    </script>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
@@ -22,13 +17,13 @@
         vr-mode-ui="enabled: false"
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
-        <a-assets>
+        <!-- <a-assets>
             <a-entity gltf-model="./assets/models/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" id="magnemite"></a-entity>
-        </a-assets>
-        <a-entity gltf-model="./assets/models/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 12.489820; latitude: 41.892590;" animation-mixer/>
-        <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
+        </a-assets> -->
+        <a-entity gltf-model="./assets/models/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
+        <!-- <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
             <a-gltf-model src="#magnemite"></a-gltf-model>
-        </a-marker>
+        </a-marker> -->
         <a-entity camera></a-entity>
       </a-scene>
     </div>
