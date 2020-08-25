@@ -1,32 +1,24 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="css/camera.css" />
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  </head>
-
-  <body data-page-layout="docs" data-page-type="components">
-    <div id="embeddedScene">
-      <a-scene
-        vr-mode-ui="enabled: false"
-        embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
         <a-assets>
-            <!-- <a-entity gltf-model="./assets/models/dragonite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" id="magnemite"></a-entity> -->
-            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-        </a-assets>
-        <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
-            <a-box src="#boxTexture"></a-box>
-        </a-marker>
-        <a-entity camera></a-entity>
-      </a-scene>
-    </div>
+            <video id="bella" autoplay loop="true" muted="true" src="./assets/videos/bella-running.MOV"></video>
+          </a-assets>
+      <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
+         <!-- <a-box position='0 0.5 0' material='color: yellow; opacity: 0.5;'></a-box> -->
+	  <a-video src="#bella" position="0 0.5 0" rotation="90 -90 0" play="true"></a-video>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+    
+    <script>
+      window.addEventListener('click', function () {
+        var v = document.querySelector('#bella');
+        v.play();
+      });
+    </script>
   </body>
 </html>
