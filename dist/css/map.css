@@ -1,9 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 #map {
-    width: 100vw;
-    height: 95vh;
-    background-color: grey;
-  }
+  width: 100vw;
+  height: 92vh;
+  background-color: grey;
+}

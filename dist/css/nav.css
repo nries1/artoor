@@ -1,26 +1,28 @@
 nav {
-    display: flex;
-    justify-content: space-around;
-    height: 5vh;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  height: 8vh;
+  padding-bottom: 1vh;
+  width: 100%;
 }
 .nav-item {
-    height: 100%;
-    width: 50px;
-    cursor: pointer;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .home {
-    background-image: url('../assets/home.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../assets/home.svg');
 }
 .camera {
-    background-image: url('../assets/camera.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../assets/camera.svg');
 }
 .place {
-    background-image: url('../assets/place.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../assets/place.svg');
+}
+.finder {
+  background-image: url('../assets/explore.svg');
 }
