@@ -1,24 +1,20 @@
-<!doctype HTML>
+
+<!DOCTYPE html>
 <html>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-        <a-assets>
-            <video id="bella" autoplay loop="true" muted="true" src="./assets/videos/bella-running.MOV"></video>
-          </a-assets>
-      <a-marker type="pattern" url="./assets/patterns/watermellon.patt">
-         <!-- <a-box position='0 0.5 0' material='color: yellow; opacity: 0.5;'></a-box> -->
-	  <a-video src="#bella" position="0 0.5 0" rotation="90 -90 0" play="true"></a-video>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-    
-    <script>
-      window.addEventListener('click', function () {
-        var v = document.querySelector('#bella');
-        v.play();
-      });
-    </script>
-  </body>
-</html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GeoAR.js demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+</head>
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        <a-entity gltf-model="./assets/models/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: -73.939529; latitude: 40.671570;" animation-mixer/>
+        <a-camera gps-camera rotation-reader></a-camera>
+	</a-scene>
+</body>
