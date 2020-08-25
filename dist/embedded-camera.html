@@ -17,21 +17,16 @@
       <a-scene
         vr-mode-ui="enabled: false"
         embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
+        arjs='sourceType: webcam;'>
         <a-assets>
             <!-- <a-entity gltf-model="./assets/models/dragonite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" id="magnemite"></a-entity> -->
-            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
         </a-assets>
         <a-marker id="marker" emitevents="true" type="pattern" url="./assets/patterns/watermellon.patt">
-            <a-box id="box" src="#boxTexture"></a-box>
+            <a-box src="#boxTexture" position='0 -2.5 2' scale="2 2 2" rotation="0 0 0"></a-box>
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
     </div>
-    <script>
-        document.getElementById('marker').addEventListener('markerFound', function() {
-          window.location.href="./video.html";
-        });
-    </script>
   </body>
 </html>
