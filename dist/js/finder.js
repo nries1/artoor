@@ -12,6 +12,12 @@ var places = [
     icon: '',
     info: ''
   }
+  {
+    title: 'Good Taste Chinese Restaurant',
+    position: { lat: 40.671890, lng: -73.941700},
+    icon: '',
+    info: ''
+  }
 ];
 
 window.onload = () => {
