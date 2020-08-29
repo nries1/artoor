@@ -6,6 +6,13 @@ var markers = [
     info:
       '<h4>Zak\'s Patio</h4><div stlye="font-size: 12px;"><div>Cozy outdoor patio with handmade craft cocktails</div><div style="display: flex;"><span style="margin-right: 10px;">Look for:</span><div style="background-image: url(./assets/watermellon.png); background-repeat: no-repeat; width: 15px; height: 15px; background-size: cover;"></div></div></div>',
   },
+  {
+    title: 'Franklin Park',
+    position: { lat: 40.67417, lng: -73.9567 },
+    icon: './assets/record_voice_over.svg',
+    info:
+      '<h4>Franklin Park</h4><div stlye="font-size: 12px;"><div>Outdoor bar and restaurant with vegan options and sports</div><div style="display: flex;"><span style="margin-right: 10px;">Look for:</span><div style="background-image: url(./assets/watermellon.png); background-repeat: no-repeat; width: 15px; height: 15px; background-size: cover;"></div></div></div>',
+  },
 ];
 
 function initMap() {
@@ -13,7 +20,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 15,
-    gestureHandling: 'greedy'
+    gestureHandling: 'greedy',
   });
   infoWindow = new google.maps.InfoWindow();
 

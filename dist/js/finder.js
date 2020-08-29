@@ -7,49 +7,58 @@ var places = [
       '<h4>Zak\'s Patio</h4><div stlye="font-size: 12px;"><div>Cozy outdoor patio with handmade craft cocktails</div><div style="display: flex;"><span style="margin-right: 10px;">Look for:</span><div style="background-image: url(./assets/watermellon.png); background-repeat: no-repeat; width: 15px; height: 15px; background-size: cover;"></div></div></div>',
   },
   {
-    title: 'Nick\'s House',
-    position: { lat: 40.671570, lng: -73.939529},
+    title: "Nick's House",
+    position: { lat: 40.67157, lng: -73.939529 },
     icon: '',
-    info: ''
+    info: '',
   },
   {
     title: 'Good Taste Chinese Restaurant',
-    position: { lat: 40.671890, lng: -73.941700},
+    position: { lat: 40.67189, lng: -73.9417 },
     icon: '',
-    info: ''
-  }
+    info: '',
+  },
+  {
+    title: 'Franklin Park',
+    position: { lat: 40.67417, lng: -73.9567 },
+    icon: '',
+    info: '',
+  },
 ];
 
 window.onload = () => {
   const scene = document.querySelector('a-scene');
   // first get current user location
-  return navigator.geolocation.getCurrentPosition(function () {
-    places.forEach((place) => {
-      const latitude = place.position.lat;
-      const longitude = place.position.lng;
-      // add place name
-      const placeText = document.createElement('a-link');
-      placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-      placeText.setAttribute('title', place.title);
-      placeText.setAttribute('scale', '15 15 15');
-                  
-      placeText.addEventListener('loaded', () => {
-        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
-      });
+  return navigator.geolocation.getCurrentPosition(
+    function () {
+      places.forEach(place => {
+        const latitude = place.position.lat;
+        const longitude = place.position.lng;
+        // add place name
+        const placeText = document.createElement('a-link');
+        placeText.setAttribute(
+          'gps-entity-place',
+          `latitude: ${latitude}; longitude: ${longitude};`
+        );
+        placeText.setAttribute('title', place.title);
+        placeText.setAttribute('scale', '15 15 15');
 
-      scene.appendChild(placeText);
-      console.log('link added at ', latitude, longitude);
-    });
-  },
-  (err) => console.error('Error in retrieving position', err),
-  {
-    enableHighAccuracy: true,
-    maximumAge: 0,
-    timeout: 27000,
-  }
+        placeText.addEventListener('loaded', () => {
+          window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
+        });
+
+        scene.appendChild(placeText);
+        console.log('link added at ', latitude, longitude);
+      });
+    },
+    err => console.error('Error in retrieving position', err),
+    {
+      enableHighAccuracy: true,
+      maximumAge: 0,
+      timeout: 27000,
+    }
   );
 };
-
 
 // if (window.DeviceOrientationEvent) {
 //   console.log('ADDED DEVICE ORIENTATION LISTENER');
